@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="css/styles.css" rel="stylesheet">
+  <meta name="theme-color" content="#FFFFFF">
+  <title>Testing</title>
+</head>
+
+<body>
+  <div style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <symbol id="arrow" viewBox="0 0 15 14">
+        <path d="M7.39273 13.1945L1.06067 6.86239L7.39273 0.53033" stroke-width="1.5"/>
+        <path d="M1.63739 6.86112L14.8772 6.86112" stroke-width="1.5"/>
+      </symbol>
+      <symbol id="burger" viewBox="0 0 22 14">
+        <path d="M0 1H22" stroke-width="2"/>
+        <path d="M0 7H22"  stroke-width="2"/>
+        <path d="M0 13H22" stroke-width="2"/>
+      </symbol>
+      <symbol id="check" viewBox="0 0 10 8">
+        <path d="M0.707092 3.20715L3.70709 6.20715L9.20709 0.707153" />
+      </symbol>
+      <symbol id="heart" viewBox="0 0 20 18">
+        <path d="M17.612 2.41452C17.1722 1.96607 16.65 1.61034 16.0752 1.36763C15.5005 1.12492 14.8844 1 14.2623 1C13.6401 1 13.0241 1.12492 12.4493 1.36763C11.8746 1.61034 11.3524 1.96607 10.9126 2.41452L9.99977 3.34476L9.08699 2.41452C8.19858 1.50912 6.99364 1.00047 5.73725 1.00047C4.48085 1.00047 3.27591 1.50912 2.38751 2.41452C1.4991 3.31992 1 4.5479 1 5.82833C1 7.10875 1.4991 8.33674 2.38751 9.24214L3.30029 10.1724L9.99977 17L16.6992 10.1724L17.612 9.24214C18.0521 8.79391 18.4011 8.26171 18.6393 7.67596C18.8774 7.0902 19 6.46237 19 5.82833C19 5.19428 18.8774 4.56645 18.6393 3.9807C18.4011 3.39494 18.0521 2.86275 17.612 2.41452V2.41452Z" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="search" viewBox="0 0 18 18">
+        <path d="M7.66668 14.3334C11.3486 14.3334 14.3334 11.3486 14.3334 7.66668C14.3334 3.98478 11.3486 1 7.66668 1C3.98478 1 1 3.98478 1 7.66668C1 11.3486 3.98478 14.3334 7.66668 14.3334Z" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16.9554 17L12.3331 12.3778" stroke-linejoin="round"/>
+      </symbol>
+    </svg>
+  </div>
+
+  <!-- header -->
+  <header>
+    <div class="header">
+      <div class="header__wrapper wrapper">
+        <div class="header__logo">
+          <a href="#">
+            <img src="img/icons/logo.svg" alt="Логотип Natura" height="19" width="280">
+          </a>
+        </div>
+        <ul class="header__nav">
+          <li>
+            <a href="#">
+              <img src="img/icons/nav-item-1.svg" alt="Диван" height="15" width="14">
+              <span>Гостиная</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/icons/nav-item-2.svg" alt="Кухонная плита" height="15" width="14">
+              <span>Кухня</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/icons/nav-item-3.svg" alt="Голова медвеженка" height="15" width="14">
+              <span>Детская</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/icons/nav-item-4.svg" alt="Ванная" height="15" width="14">
+              <span>Ванная</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/icons/nav-item-5.svg" alt="Кровать" height="15" width="14">
+              <span>Спальня</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="header__list">
+          <li>
+            <a href="#">
+              <span class="header__search">
+                <svg width="18" height="18">
+                  <use xlink:href="#search"></use>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="header__favorite">
+                <svg width="20" height="18">
+                  <use xlink:href="#heart"></use>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li>
+            <button class="header__burger" type="button" aria-label="Меню">
+              <svg width="22" height="14">
+                <use xlink:href="#burger"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- end header -->
+
+  <!-- main -->
+  <main>
+    <div class="inner-page wrapper">
+      <div class="inner-page__grid inner-page__grid--sidebar">
+        <!-- main -->
+        <div class="inner-page__main">
+
+          <!-- crumbs -->
+          <div class="crumbs">
+            <ul class="crumbs__list">
+              <li>
+                <a class="crumbs__link" href="#">Главная</a>
+              </li>
+              <li>
+                <a class="crumbs__link" href="#">Каталог</a>
+              </li>
+              <li>
+                <a class="crumbs__link current" href="#">Спальня</a>
+              </li>
+              <li>
+                <span class="crumbs__link current">Постельное бельё</span>
+              </li>
+            </ul>
+          </div>
+          <!-- end crumbs -->
+
+          <!-- title -->
+          <div class="title">
+            <div class="title__main">
+              <h1>Постельное бельё</h1>
+              <img src="img/icons/nav-item-5.svg" alt="Диван" height="27" width="32">
+            </div>
+            <div class="title__wysiwyg wysiwyg">
+              <p>Правомочен микрохроматический интервал традиционно трансформирует комплексный голос, что несомненно приведет нас к истине вектор переворачивает аккорд. Скачок функции, как бы это ни казалось парадоксальным, начинает голос наибольшее и наименьшее значения функции вызывает ряд тейлора. Сумма ряда концентрирует миксолидийский нонаккорд, что и требовалось доказать.</p>
+            </div>
+          </div>
+          <!-- end title -->
+
+          <!-- sort -->
+          <section class="sort">
+            <h2 class="visually-hidden">Сортировка</h2>
+            <form action="">
+              <ul>
+                <li class="sort__item">
+                  <input type="checkbox" id="sort-1">
+                  <label for="sort-1">По популярности</label>
+                </li>
+                <li class="sort__item">
+                  <input type="checkbox" id="sort-2" checked>
+                  <label for="sort-2">Материал</label>
+                </li>
+                <li class="sort__item">
+                  <input type="checkbox" id="sort-3">
+                  <label for="sort-3">Размер</label>
+                </li>
+              </ul>
+            </form>
+            <span class="sort__value">1 120 товаров</span>
+          </section>
+          <!-- end sort -->
+
+          <!-- product-list -->
+          <div class="product-list">
+            <ul>
+              <li>
+                <div class="product-list__item">
+                  <a class="product-list__link" href="#">
+                    <div class="product-list__image">
+                      <div class="product-list__preview">
+                        <picture>
+                          <!-- <source srcset=".webp" type="image/webp"> -->
+                          <img src="img/products/image-1.jpg" width="367" height="367" alt="">
+                        </picture>
+                      </div>
+                      <!-- slider --><!-- end slider -->
+                    </div>
+                    <p>КПБ &laquo;Мальва&raquo;</p>
+                    <span>Рис. 5676</span>
+                  </a>
+                  <!-- favorite -->
+                  <label class="product-list__favorite favorite">
+                    <input type="checkbox">
+                    <svg width="20" height="18">
+                      <use xlink:href="#heart"></use>
+                    </svg>
+                  </label>
+                  <!-- end favorite -->
+                </div>
+              </li>
+              <li>
+                <div class="product-list__item">
+                  <a class="product-list__link" href="#">
+                    <div class="product-list__image">
+                      <div class="product-list__preview">
+                        <picture>
+                          <!-- <source srcset=".webp" type="image/webp"> -->
+                          <img src="img/products/image-2.jpg" width="367" height="367" alt="">
+                        </picture>
+                      </div>
+                      <!-- slider -->
+                      <div class="product-list__slider slider">
+                        <ul class="slider__list">
+                          <li>
+                            <div>
+                              <picture>
+                                <!-- <source srcset=".webp" type="image/webp"> -->
+                                <img src="img/products/image-1.jpg" width="367" height="367" alt="">
+                              </picture>
+                            </div>
+                          </li>
+                          <li>
+                            <div>
+                              <picture>
+                                <!-- <source srcset=".webp" type="image/webp"> -->
+                                <img src="img/products/image-2.jpg" width="367" height="367" alt="">
+                              </picture>
+                            </div>
+                          </li>
+                          <li>
+                            <div>
+                              <picture>
+                                <!-- <source srcset=".webp" type="image/webp"> -->
+                                <img src="img/products/image-3.jpg" width="367" height="367" alt="">
+                              </picture>
+                            </div>
+                          </li>
+                          <li>
+                            <div>
+                              <picture>
+                                <!-- <source srcset=".webp" type="image/webp"> -->
+                                <img src="img/products/image-2.jpg" width="367" height="367" alt="">
+                              </picture>
+                            </div>
+                          </li>
+                        </ul>
+                        <ul class="slider__pagitanor">
+                          <li class="current"></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                        </ul>
+                      </div>
+                      <!-- end slider -->
+                    </div>
+                    <p>КПБ &laquo;Мальва&raquo;</p>
+                    <span>Рис. 5676</span>
+                  </a>
+                  <!-- favorite -->
+                  <label class="product-list__favorite favorite">
+                    <input type="checkbox">
+                    <svg width="20" height="18">
+                      <use xlink:href="#heart"></use>
+                    </svg>
+                  </label>
+                  <!-- end favorite -->
+                </div>
+              </li>
+              <li>
+                <div class="product-list__item">
+                  <a class="product-list__link" href="#">
+                    <div class="product-list__image">
+                      <div class="product-list__preview">
+                        <picture>
+                          <!-- <source srcset=".webp" type="image/webp"> -->
+                          <img src="img/products/image-1.jpg" width="367" height="367" alt="">
+                        </picture>
+                      </div>
+                      <!-- slider --><!-- end slider -->
+                    </div>
+                    <p>КПБ &laquo;Мальва&raquo;</p>
+                    <span>Рис. 5676</span>
+                  </a>
+                  <!-- favorite -->
+                  <label class="product-list__favorite favorite">
+                    <input type="checkbox">
+                    <svg width="20" height="18">
+                      <use xlink:href="#heart"></use>
+                    </svg>
+                  </label>
+                  <!-- end favorite -->
+                </div>
+              </li>
+              <li>
+                <div class="product-list__item">
+                  <a class="product-list__link" href="#">
+                    <div class="product-list__image">
+                      <div class="product-list__preview">
+                        <picture>
+                          <!-- <source srcset=".webp" type="image/webp"> -->
+                          <img src="img/products/image-1.jpg" width="367" height="367" alt="">
+                        </picture>
+                      </div>
+                      <!-- slider --><!-- end slider -->
+                    </div>
+                    <p>КПБ &laquo;Мальва&raquo;</p>
+                    <span>Рис. 5676</span>
+                  </a>
+                  <!-- favorite -->
+                  <label class="product-list__favorite favorite">
+                    <input type="checkbox">
+                    <svg width="20" height="18">
+                      <use xlink:href="#heart"></use>
+                    </svg>
+                  </label>
+                  <!-- end favorite -->
+                </div>
+              </li>
+              <li>
+                <div class="product-list__item">
+                  <a class="product-list__link" href="#">
+                    <div class="product-list__image">
+                      <div class="product-list__preview">
+                        <picture>
+                          <!-- <source srcset=".webp" type="image/webp"> -->
+                          <img src="img/products/image-1.jpg" width="367" height="367" alt="">
+                        </picture>
+                      </div>
+                      <!-- slider --><!-- end slider -->
+                    </div>
+                    <p>КПБ &laquo;Мальва&raquo;</p>
+                    <span>Рис. 5676</span>
+                  </a>
+                  <!-- favorite -->
+                  <label class="product-list__favorite favorite">
+                    <input type="checkbox">
+                    <svg width="20" height="18">
+                      <use xlink:href="#heart"></use>
+                    </svg>
+                  </label>
+                  <!-- end favorite -->
+                </div>
+              </li>
+              <li>
+                <div class="product-list__item">
+                  <a class="product-list__link" href="#">
+                    <div class="product-list__image">
+                      <div class="product-list__preview">
+                        <picture>
+                          <!-- <source srcset=".webp" type="image/webp"> -->
+                          <img src="img/products/image-1.jpg" width="367" height="367" alt="">
+                        </picture>
+                      </div>
+                      <!-- slider --><!-- end slider -->
+                    </div>
+                    <p>КПБ &laquo;Мальва&raquo;</p>
+                    <span>Рис. 5676</span>
+                  </a>
+                  <!-- favorite -->
+                  <label class="product-list__favorite favorite">
+                    <input type="checkbox">
+                    <svg width="20" height="18">
+                      <use xlink:href="#heart"></use>
+                    </svg>
+                  </label>
+                  <!-- end favorite -->
+                </div>
+              </li>
+              <li>
+                <div class="product-list__item">
+                  <a class="product-list__link" href="#">
+                    <div class="product-list__image">
+                      <div class="product-list__preview">
+                        <picture>
+                          <!-- <source srcset=".webp" type="image/webp"> -->
+                          <img src="img/products/image-1.jpg" width="367" height="367" alt="">
+                        </picture>
+                      </div>
+                      <!-- slider --><!-- end slider -->
+                    </div>
+                    <p>КПБ &laquo;Мальва&raquo;</p>
+                    <span>Рис. 5676</span>
+                  </a>
+                  <!-- favorite -->
+                  <label class="product-list__favorite favorite">
+                    <input type="checkbox">
+                    <svg width="20" height="18">
+                      <use xlink:href="#heart"></use>
+                    </svg>
+                  </label>
+                  <!-- end favorite -->
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- end product-list -->
+
+          <!-- paginator -->
+          <div class="paginator">
+            <ul class="paginator__list">
+              <li>
+                <a class="paginator__item paginator__next" href="#">
+                  <span>
+                    <svg width="15" height="14">
+                      <use xlink:href="#arrow"></use>
+                    </svg>
+                  </span>
+                  <span>Назад</span>
+                </a>
+              </li>
+              <li>
+                <a class="paginator__item" href="#">
+                  <span>1</span>
+                </a>
+              </li>
+              <li>
+                <a class="paginator__item" href="#">
+                  <span>2</span>
+                </a>
+              </li>
+              <li>
+                <div class="paginator__item current">
+                  <span>3</span>
+                </div>
+              </li>
+              <li>
+                <a class="paginator__item" href="#">
+                  <span>4</span>
+                </a>
+              </li>
+              <li>
+                <a class="paginator__item" href="#">
+                  <span>...</span>
+                </a>
+              </li>
+              <li>
+                <a class="paginator__item" href="#">
+                  <span>99</span>
+                </a>
+              </li>
+              <li>
+                <a class="paginator__item" href="#">
+                  <span>100</span>
+                </a>
+              </li>
+              <li>
+                <a class="paginator__item" href="#">
+                  <span>101</span>
+                </a>
+              </li>
+              <li>
+                <a  class="paginator__item paginator__prev" href="#">
+                  <span>Вперёд</span>
+                  <span>
+                    <svg width="15" height="14">
+                      <use xlink:href="#arrow"></use>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <a class="paginator__more" href="#">Показать ещё</a>
+          </div>
+          <!-- end paginator -->
+
+          <ul class="inner-page__wysiwyg">
+            <li>
+              <section class="wysiwyg">
+                <h2>СЕО-заголовок</h2>
+                <p>Правомочен микрохроматический интервал традиционно трансформирует комплексный голос, что несомненно приведет нас к истине вектор переворачивает аккорд. Скачок функции, как бы это ни казалось парадоксальным, начинает голос наибольшее и наименьшее значения функции вызывает ряд тейлора. Сумма ряда концентрирует миксолидийский нонаккорд, что и требовалось доказать.</p>
+              </section>
+            </li>
+            <li>
+              <section class="wysiwyg">
+                <h2>Доставка товара</h2>
+                <p>Правомочен микрохроматический интервал традиционно трансформирует комплексный голос, что несомненно приведет нас к истине вектор переворачивает аккорд. Скачок функции, как бы это ни казалось парадоксальным, начинает голос наибольшее и наименьшее значения функции вызывает ряд тейлора. Сумма ряда концентрирует миксолидийский нонаккорд, что и требовалось доказать.</p>
+              </section>
+            </li>
+            <li>
+              <section class="wysiwyg">
+                <h2>Оплата товара</h2>
+                <p>Правомочен микрохроматический интервал традиционно трансформирует комплексный голос, что несомненно приведет нас к истине вектор переворачивает аккорд. Скачок функции, как бы это ни казалось парадоксальным, начинает голос наибольшее и наименьшее значения функции вызывает ряд тейлора. Сумма ряда концентрирует миксолидийский нонаккорд, что и требовалось доказать. Скачок функции, как бы это ни казалось парадоксальным, начинает голос наибольшее и наименьшее значения функции вызывает ряд тейлора. Сумма ряда концентрирует миксолидийский нонаккорд, что и требовалось доказать.</p>
+              </section>
+            </li>
+          </ul>
+
+        </div>
+        <!-- end main -->
+        <!-- filter -->
+        <section class="inner-page__filter filter">
+          <h2 class="visually-hidden">Фильтр</h2>
+          <a href="#">Все товары</a>
+          <form action="">
+            <fieldset>
+              <legend>Вид ткани</legend>
+              <!-- checkbox -->
+              <label class="checkbox">
+                <input type="checkbox" checked>
+                <span class="checkbox__icon">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span>Бязь</span>
+                <span class="checkbox__value">3</span>
+              </label>
+              <!-- end checkbox -->
+              <!-- checkbox -->
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Сатин</span>
+                <span class="checkbox__value">9</span>
+              </label>
+              <!-- end checkbox -->
+              <!-- checkbox -->
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Поплин</span>
+                <span class="checkbox__value">1</span>
+              </label>
+              <!-- end checkbox -->
+              <!-- checkbox -->
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Ранфорс</span>
+                <span class="checkbox__value">34</span>
+              </label>
+              <!-- end checkbox -->
+              <!-- checkbox -->
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Перкаль</span>
+                <span class="checkbox__value">9</span>
+              </label>
+              <!-- end checkbox -->
+            </fieldset>
+            <fieldset>
+              <legend>Размер</legend>
+              <!-- checkbox -->
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">1,5 сп</span>
+                <span class="checkbox__value">3</span>
+              </label>
+              <!-- end checkbox -->
+              <!-- checkbox -->
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">2 сп</span>
+                <span class="checkbox__value">9</span>
+              </label>
+              <!-- end checkbox -->
+              <!-- checkbox -->
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Евро</span>
+                <span class="checkbox__value">1</span>
+              </label>
+              <!-- end checkbox -->
+              <!-- checkbox -->
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Семейный</span>
+                <span class="checkbox__value">34</span>
+              </label>
+              <!-- end checkbox -->
+            </fieldset>
+            <fieldset>
+              <legend>Дизайн</legend>
+              <!-- checkbox -->
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Цветы</span>
+                <span class="checkbox__value">3</span>
+              </label>
+              <!-- end checkbox -->
+              <!-- checkbox -->
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Геометрия</span>
+                <span class="checkbox__value">9</span>
+              </label>
+              <!-- end checkbox -->
+              <!-- checkbox -->
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Абстракция</span>
+                <span class="checkbox__value">1</span>
+              </label>
+              <!-- end checkbox -->
+              <!-- checkbox -->
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Animal</span>
+                <span class="checkbox__value">34</span>
+              </label>
+              <!-- end checkbox -->
+            </fieldset>
+            <fieldset>
+              <legend>Тип</legend>
+              <!-- checkbox -->
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Комплект</span>
+                <span class="checkbox__value">3</span>
+              </label>
+              <!-- end checkbox -->
+              <!-- checkbox -->
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Пододеяльник</span>
+                <span class="checkbox__value">9</span>
+              </label>
+              <!-- end checkbox -->
+              <!-- checkbox -->
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Простыня</span>
+                <span class="checkbox__value">1</span>
+              </label>
+              <!-- end checkbox -->
+              <!-- checkbox -->
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Комплект наволочек</span>
+                <span class="checkbox__value">34</span>
+              </label>
+              <!-- end checkbox -->
+            </fieldset>
+            <fieldset>
+              <legend>Цвет</legend>
+              <!-- checkbox -->
+              <label class="checkbox checkbox--round">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <span class="checkbox__back" style="background:#FFFFFF"></span>
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Белый</span>
+                <span class="checkbox__value">3</span>
+              </label>
+              <!-- end checkbox -->
+              <!-- checkbox -->
+              <label class="checkbox checkbox--round">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <span class="checkbox__back" style="background:#ECBBAF"></span>
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Персиковый</span>
+                <span class="checkbox__value">9</span>
+              </label>
+              <!-- end checkbox -->
+              <!-- checkbox -->
+              <label class="checkbox checkbox--round">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <img src="img/filter/color-1.svg" alt="Цвет простыни" height="18" width="18">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Простыня</span>
+                <span class="checkbox__value">1</span>
+              </label>
+              <!-- end checkbox -->
+              <!-- checkbox -->
+              <label class="checkbox checkbox--round">
+                <input type="checkbox">
+                <span class="checkbox__icon">
+                  <span class="checkbox__back" style="background:#FDBD4E"></span>
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Желтый</span>
+                <span class="checkbox__value">34</span>
+              </label>
+              <!-- end checkbox -->
+              <label class="checkbox checkbox--round">
+                <input type="checkbox" checked>
+                <span class="checkbox__icon" style="background:#FFFFFF">
+                  <svg width="10" height="8">
+                    <use xlink:href="#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox__text">Белый</span>
+                <span class="checkbox__value">3</span>
+              </label>
+              <!-- end checkbox -->
+            </fieldset>
+          </form>
+        </section>
+        <!-- end filter -->
+      </div>
+    </div>
+  </main>
+  <!-- end main -->
+
+  <!-- footer -->
+  <footer>
+    <div class="footer wrapper">
+      <div class="footer__wrapper">
+        <div class="footer__main">
+          <div class="footer__logo">
+            <img src="img/icons/logo.svg" alt="Логотип Natura" height="73" width="111">
+          </div>
+          <ul class="footer__nav">
+            <li>
+              <h3>О компании</h3>
+              <ul>
+                <li>
+                  <a href="#">О Компании</a>
+                </li>
+                <li>
+                  <a href="#">Новости</a>
+                </li>
+                <li>
+                  <a href="#">Акции и скидки</a>
+                </li>
+                <li>
+                  <a href="#">Гарантии</a>
+                </li>
+                <li>
+                  <a href="#">Розничная сеть</a>
+                </li>
+                <li>
+                  <a href="#">О бренде</a>
+                </li>
+                <li>
+                  <a href="#">Отзывы</a>
+                </li>
+                <li>
+                  <a href="#">Контакты</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>Помощь</h3>
+              <ul>
+                <li>
+                  <a href="#">Избранное</a>
+                </li>
+                <li>
+                  <a href="#">Личный кабинет</a>
+                </li>
+                <li>
+                  <a href="#">FAQ</a>
+                </li>
+                <li>
+                  <a href="#">Оптовикам</a>
+                </li>
+                <li>
+                  <a href="#">Партнеры</a>
+                </li>
+                <li>
+                  <a href="#">Как купить</a>
+                </li>
+                <li>
+                  <a href="#">Доставка и оплата</a>
+                </li>
+                <li>
+                  <a href="#">Условия покупки</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>Каталог</h3>
+              <ul>
+                <li>
+                  <a href="#">Гостиная</a>
+                </li>
+                <li>
+                  <a href="#">Кухня</a>
+                </li>
+                <li>
+                  <a href="#">Детская</a>
+                </li>
+                <li>
+                  <a href="#">Ванная</a>
+                </li>
+                <li>
+                  <a href="#">Спальня</a>
+                </li>
+                <li>
+                  <a href="#">Lookbook</a>
+                </li>
+                <li>
+                  <a href="#">Распродажа</a>
+                </li>
+                <li>
+                  <a href="#">Коллекции</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="footer__contacts">
+            <h3>Контакты</h3>
+            <ul>
+              <li>
+                <span>Иваново</span>
+                <a href="tel:+74932111111">+7 (4932) 11-11-11</a>
+              </li>
+              <li>
+                <span>Москва</span>
+                <a href="tel:+74951111111">+7 (495) 111-11-11</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__copyright">
+            <p>&laquo;Natura&raquo; — Торговая марка компании</p>
+            <p>Все права защищены</p>
+          </div>
+          <div class="footer__social">
+            <ul>
+              <li>
+                <a class="footer__social-link" href="#" target="_blank">
+                  <img src="img/social/social-vk.svg" width="29" height="16" alt="Вконтакте">
+                </a>
+              </li>
+              <li>
+                 <a class="footer__social-link" href="#" target="_blank">
+                  <img src="img/social/social-insta.svg" width="19" height="20" alt="Инстаграм">
+                </a>
+              </li>
+              <li>
+                <a class="footer__social-link" href="#" target="_blank">
+                  <img src="img/social/social-ok.svg" width="15" height="22" alt="Одноклассники">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__address">
+            <p>Россия, 153032, г. Иваново, ул. Пушкина, д. 20 стр. 90</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end footer -->
+
+  <!-- modal-nav -->
+  <div></div>
+  <!-- end modal-nav -->
+
+  <!-- modal-search -->
+  <div></div>
+  <!-- end modal-search -->
+</body>
+
+</html>
